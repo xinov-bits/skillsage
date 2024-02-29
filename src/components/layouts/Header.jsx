@@ -92,7 +92,7 @@ const Header = () => {
                 </div>
 
 
-                <div className="flex justify-end items-center w-full h-full text-[#191919]">
+                <div className="flex sm:flex md:hidden lg:hidden xl:hidden justify-end items-center w-full h-full text-[#191919]">
                     <button className="flex justify-center items-center w-8 h-8 bg-white cursor-pointer  no-focus" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
                         <svg className="flex justify-center items-center w-full h-full" strokeWidth={1}
                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
