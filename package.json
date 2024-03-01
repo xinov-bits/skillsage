@@ -13,6 +13,7 @@
     "axios": "^1.6.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "crypto-js": "^4.2.0",
     "framer-motion": "^11.0.8",
     "lucide-react": "^0.343.0",
     "mongodb": "^6.4.0",
