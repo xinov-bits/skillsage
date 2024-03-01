@@ -15,7 +15,7 @@ import ProductCart from '@/components/sections/ProductCart';
 // AXIOS
 import axios from 'axios';
 
-export default function Page() {
+const Page = () => {
     const router = useRouter();
     const query = useSearchParams();
 
@@ -74,7 +74,7 @@ export default function Page() {
                         Search results for &#34;{searchKeyword}&#34;
                     </div>
 
-                    <div className="flex justify-start items-center w-full mt-4 text-base leading-none text-[#767676]">
+                    <div className="hidden sm:hidden md:flex lg:flex xl:flex justify-start items-center w-full mt-4 text-base leading-none text-[#767676]">
                         <form className="relative flex justify-center items-center w-full h-full bg-white" htmlFor="search_inp_keyw" onSubmit={handleSearchSubmit}>
                             <div className="absolute left-0 flex justify-center items-center w-8 h-full pointer-events-none">
                                 <svg className="flex justify-center items-center w-4 h-4" width={16} height={16}>
@@ -118,3 +118,5 @@ export default function Page() {
         </>
     )
 }
+
+export default Page
