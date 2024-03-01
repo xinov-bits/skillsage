@@ -60,7 +60,7 @@ const ProductCart = ({ url, name, image, price, description, category, duration 
             >
                 <div className="flex flex-col justify-start items-start w-full h-auto">
                     <div className="relative flex justify-start items-center w-full h-auto bg-[#f7f7f7] select-none overflow-hidden">
-                        <div className="absolute top-0 flex justify-center items-center w-full h-full bg-gradient-to-b from-black to-transparent opacity-30 pointer-events-none" />
+                        {/* <div className="absolute top-0 flex justify-center items-center w-full h-full bg-gradient-to-b from-black to-transparent opacity-30 pointer-events-none" /> */}
 
                         <Link href={`/course/${url}`} className="no-focus">
                             <Image className="flex justify-center items-center w-full h-full"

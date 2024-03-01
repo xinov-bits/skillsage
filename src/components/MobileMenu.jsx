@@ -75,7 +75,7 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
                                     Menu
                                 </div>
 
-                                <button className="flex justify-center items-center w-14 h-full cursor-pointer bg-[red] no-focus" onClick={() => {
+                                <button className="flex justify-center items-center w-14 h-full cursor-pointer bg-white no-focus" onClick={() => {
                                     setIsMobileMenuOpen(false);
                                 }}>
                                     <svg className="flex justify-center items-center w-10 h-10 text-[#292929]" width={24} height={24}>
