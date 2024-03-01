@@ -21,13 +21,7 @@ const Page = () => {
     return (
         <>
             <div className="flex justify-start items-start w-full h-full p-4 sm:p-4 md:p-8 lg:p-8 xl:p-8 pb-20 text-[#191919]">
-                <div className="flex flex-col justify-start items-center w-full h-full">
-                    <div className="flex justify-start items-center w-full text-2xl font-semibold leading-none">
-                        Search results for &#34;{searchKeyword}&#34;
-                    </div>
-
-                    <Search />
-                </div>
+                <Search />
             </div>
         </>
     )
