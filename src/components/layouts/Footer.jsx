@@ -43,7 +43,7 @@ const Footer = () => {
     ]
 
     return (
-        <div className="bottom-0 flex justify-center items-end w-full h-full">
+        <div className="bottom-0 flex justify-center items-end w-full h-full overflow-hidden">
             <div className="block justify-center items-center w-full px-8 py-6 bg-[#f7f7f7] text-[#191919] border-t border-[#e5e5e5] divide-y divide-[#e5e5e5]">
                 <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-y-4 sm:gap-y-4 md:gap-y-0 lg:gap-y-0 xl:gap-y-0 justify-center items-start w-full">
                     {lists.map((k, index) =>

@@ -21,7 +21,7 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
         },
         {
             'name': 'courses',
-            'url': '/',
+            'url': '/courses',
         },
         {
             'name': 'about us',
@@ -91,7 +91,7 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
                                 <ul className="flex flex-col justify-start items-center w-full h-full p-2 space-y-2">
                                     {menuItems.map((item, index) => <li key={index} className="flex justify-start items-center w-full h-auto">
                                         <Link href={item.url} className="flex justify-start items-center w-full h-full">
-                                            <button className="flex justify-start items-center w-full h-full p-2.5 font-medium leading-none capitalize rounded bg-white hover:bg-[#f7f7f7] border border-white hover:border-[#e5e5e5] active:border-[#c0c0c0] no-focus cursor-pointer">
+                                            <button className="flex justify-start items-center w-full h-full p-2.5 font-medium leading-none capitalize rounded bg-white hover:bg-[#f7f7f7] border border-white hover:border-[#e5e5e5] active:border-[#c0c0c0] no-focus cursor-pointer" onClick={() => setIsMobileMenuOpen(false)}>
                                                 {item.name}
                                             </button>
                                         </Link>

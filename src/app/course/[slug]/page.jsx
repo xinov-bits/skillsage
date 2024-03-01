@@ -92,10 +92,10 @@ export default function Page({ params }) {
 
     return (
         <>
-            <div className="block justify-start items-center w-full h-full pt-4 pb-20 bg-white text-[#191919]">
-                <div className="block justify-start items-center w-full h-full px-4">
-                    <div className="relative block sm:block md:flex lg:flex xl:flex justify-between items-center w-full h-full p-8 bg-[#fafafa] border border-[#e5e5e5] rounded-lg">
-                        <div className="flex justify-start items-center w-1/2 h-full">
+            <div className="block justify-start items-center w-screen h-full pt-2 sm:pt-2 md:pt-4 lg:pt-4 xl:pt-4 pb-20 bg-white text-[#191919] overflow-x-hidden">
+                <div className="block justify-start items-center w-full h-full px-2 sm:px-2 md:px-4 lg:px-4 xl:px-4">
+                    <div className="relative block sm:block md:flex lg:flex xl:flex justify-between items-center w-full h-full p-4 sm:p-4 m:p-8 lg:p-8 xl:p-8 bg-[#fafafa] border border-[#e5e5e5] rounded-lg">
+                        <div className="flex justify-start items-center w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 h-full">
                             <div className="block justify-start items-center w-auto h-full">
                                 <div className="flex justify-start items-center w-auto h-6 select-none">
                                     <div className="flex justify-start items-center w-auto h-full p-2 leading-none bg-[#0f102e] rounded-full font-medium text-white text-xs">
@@ -103,15 +103,15 @@ export default function Page({ params }) {
                                     </div>
                                 </div>
 
-                                <div className="flex justify-start items-center w-full mt-1 text-2xl font-bold leading-tight">
+                                <div className="flex justify-start items-center w-full mt-1 text-xl sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl font-bold leading-tight">
                                     {course.title}
                                 </div>
 
-                                <div className="flex justify-start items-center w-full mt-2 text-2xl font-medium leading-tight text-[#292929]">
+                                <div className="flex justify-start items-center w-full mt-2 text-xl sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl font-medium leading-tight text-[#292929]">
                                     {FormatedMoney.format(course.price)}
                                 </div>
 
-                                <div className="flex justify-start items-center w-full my-4 text-base font-medium text-[#767676] select-none">
+                                <div className="flex justify-start items-center w-full my-2.5 sm:my-2.5 md:my-4 lg:my-4 xl:my-4 text-base font-medium text-[#767676] select-none">
                                     {course.desc}
                                 </div>
 
@@ -147,7 +147,7 @@ export default function Page({ params }) {
                                     </div>
                                 </div>
 
-                                <div className="flex justify-start items-center w-full h-10 mt-4 space-x-3">
+                                <div className="block sm:block md:flex lg:flex xl:flex justify-start items-center w-full h-10 mt-4 space-x-0 sm:space-x-0 md:space-x-3 lg:space-x-3 xl:space-x-3 space-y-2 sm:space-y-2 md:space-y-0 lg:space-y-0 xl:space-y-0">
                                     <button className="flex justify-center items-center w-auto h-full px-4 bg-[#1f883d] rounded border border-[#1f793a] hover:bg-[#1b7135] active:border-[#1a7f37] focus:border-[#1a7f37] focus:ring-[2.5px] focus:ring-[#b4d4c5] text-white font-medium duration-100  no-focus select-none space-x-1.5">
                                         <svg className="flex justify-center items-center w-4 h-4" strokeWidth={1.5}
                                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -169,8 +169,8 @@ export default function Page({ params }) {
                             </div>
                         </div>
 
-                        <div className="flex justify-end items-center w-1/2 h-full select-none">
-                            <div className="block justify-start items-center w-[86%] h-full overflow-hidden">
+                        <div className="flex justify-end items-center w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 h-full mt-20 sm:mt-20 md:mt-0 lg:mt-0 xl:mt-0 select-none">
+                            <div className="block justify-start items-center w-full sm:w-full md:w-[86%] lg:w-[86%] xl:w-[86%] h-full overflow-hidden">
                                 <Image
                                     className="flex justify-center items-center w-full h-full rounded-md overflow-hidden cursor-pointer"
                                     src={course.dimg}
@@ -185,8 +185,8 @@ export default function Page({ params }) {
 
                 <div className="block justify-start items-center w-full mt-6 text-[#191919]">
                     <div className="flex justify-start items-center w-full border-y border-[#e5e5e5]">
-                        <ul className="flex justify-start items-end w-full text-sm select-none bg-white border-[#e5e5e5]">
-                            {tabs.map((tab, index) => <li key={index} className="flex justify-center items-end w-1/6 border-r border-[#e5e5e5]">
+                        <ul className="grid sm:grid md:flex lg:flex xl:flex grid-cols-2 justify-start items-end w-full text-sm select-none bg-white border-[#e5e5e5]">
+                            {tabs.map((tab, index) => <li key={index} className="flex justify-center items-end w-full sm:w-full md:w-1/6 lg:w-1/6 xl:w-1/6 border-r border-[#e5e5e5]">
                                 <button className={`flex justify-center items-center w-full py-3 capitalize cursor-pointer border-b border-[#e5e5e5] hover -b-2 focus -b-2 focus:border-[#1f883d] ${tab === selectedTab && 'border-b-2 border-[#1f883d]'}  no-focus`} onClick={() => setSelectedTab(tab)}>
                                     {tab.replaceAll('-', ' ')}
                                 </button>
@@ -194,7 +194,7 @@ export default function Page({ params }) {
                         </ul>
                     </div>
 
-                    <div className="flex justify-center items-center w-[60%] h-full p-4 text-[#191919] select-none">
+                    <div className="flex justify-center items-center w-full sm:w-full md:w-[60%] lg:w-[60%] xl:w-[60%] h-full p-4 sm:p-4 md:p-4 lg:p-4 xl:p-4 text-[#191919] select-none">
                         {selectedTab === 'lesson-in-this-class' && <div className="flex flex-col justify-start items-center w-full h-full p-2 bg-[#fafafa] border border-[#e5e5e5] rounded-lg">
                             <div className="flex justify-start items-center w-full font-medium text-base text-[#292929]">
                                 Estimated lessons &#40;{
@@ -202,7 +202,7 @@ export default function Page({ params }) {
                                 }&#41;
                             </div>
 
-                            {lecturesSetArr?.map((item, index) => <button key={index} className="flex justify-between items-center w-full h-10 py-1 px-2 mt-2 bg-[#fdfdfd] hover:bg-white border border-[#e5e5e5] hover:border-[#c0c0c0] focus:border-[#c0c0c0] active:border-[#767676] rounded space-x-2 no-focus group">
+                            {lecturesSetArr?.map((item, index) => <button key={index} className="flex justify-between items-center w-full h-10 py-1 px-2 mt-2 bg-[#fdfdfd] hover:bg-white border border-[#e5e5e5] hover:border-[#c0c0c0] focus:border-[#c0c0c0] active:border-[#767676] rounded space-x-2 no-focus text-sm sm:text-sm md:text-base lg:text-base xl:text-base group">
                                 <div className="flex justify-start items-center w-auto h-full">
                                     <svg className="flex justify-center items-center w-6 h-6 text-[#767676]" strokeWidth={0.8}
                                         fill="none" viewBox="0 0 24 24" stroke="currentColor">
