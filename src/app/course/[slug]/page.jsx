@@ -163,14 +163,16 @@ export default function Page({ params }) {
                                         <div> Apply now </div>
                                     </button>
 
-                                    <button className="flex justify-center items-center w-auto h-full px-4 bg-[#fafafa] rounded border border-[#1f793a] hover:bg-[#fafafa] active:border-[#1a7f37] focus:border-[#1a7f37] focus:ring-[2.5px] focus:ring-[#b4d4c5] text-[#1f883d] hover:text-[#1b7135] font-medium duration-100  no-focus select-none space-x-1.5">
-                                        <svg className="flex justify-center items-center w-4 h-4" strokeWidth={1.5}
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                                        </svg>
+                                    <a className="h-full" href="/pdf_dummy.pdf" download="pdf_dummy.pdf">
+                                        <button className="flex justify-center items-center w-auto h-full px-4 bg-[#fafafa] rounded border border-[#1f793a] hover:bg-[#fafafa] active:border-[#1a7f37] focus:border-[#1a7f37] focus:ring-[2.5px] focus:ring-[#b4d4c5] text-[#1f883d] hover:text-[#1b7135] font-medium duration-100  no-focus select-none space-x-1.5" type="submit">
+                                            <svg className="flex justify-center items-center w-4 h-4" strokeWidth={1.5}
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                                            </svg>
 
-                                        <div> Download Syllabus </div>
-                                    </button>
+                                            <div> Download Syllabus </div>
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
