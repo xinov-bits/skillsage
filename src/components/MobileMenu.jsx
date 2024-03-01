@@ -25,11 +25,11 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
         },
         {
             'name': 'about us',
-            'url': '/',
+            'url': '/about',
         },
         {
             'name': 'contact',
-            'url': '/',
+            'url': '/contact',
         },
     ]
 

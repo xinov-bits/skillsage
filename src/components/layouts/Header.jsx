@@ -98,6 +98,19 @@ const Header = () => {
                             </div>
                         </button>
                     </div>
+
+                    <div className="relative flex justify-center items-center w-9 h-full bg-white rounded">
+                        <button className="flex justify-center items-center w-full h-full bg-white rounded border border-[#e5e5e5] hover:bg-[#f7f7f7] active:border-[#c0c0c0] focus:border-[#c0c0c0] focus:ring-[2.5px] focus:ring-[#f1f1f1] no-focus"
+                            onClick={() => {
+                                setIsMobileMenuOpen(!isMobileMenuOpen);
+                            }}
+                        >
+                            <svg className="flex justify-center items-center w-[1.32rem] h-[1.32rem]" strokeWidth={1}
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
 
