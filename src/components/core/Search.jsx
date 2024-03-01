@@ -15,7 +15,8 @@ import ProductCart from '@/components/sections/ProductCart';
 // AXIOS
 import axios from 'axios';
 
-export const Search = () => {
+
+const Search = () => {
     const router = useRouter();
     const query = useSearchParams();
 
@@ -117,3 +118,5 @@ export const Search = () => {
         </>
     )
 }
+
+export default Search
