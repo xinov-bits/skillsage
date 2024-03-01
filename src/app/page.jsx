@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 // NEXT JS
 import Link from 'next/link'
@@ -12,45 +12,49 @@ import { AnimatePresence, motion } from 'framer-motion';
 // COMPONENTS
 import ProductCart from "@/components/sections/ProductCart";
 
+// AXIOS
+import axios from 'axios';
+
 export default function Home() {
-  const popularCourses = [
-    {
-      url: 'a_b_c',
-      name: 'Notion Masterclass: Maximise Your Productivity & Organisation',
-      image: 'https://i.ibb.co/qF3ppYX/original.webp',
-      price: 4999,
-      description: "Notion is one of the best productivity apps out there. It's designed to make organising and systemising your personal or professional life much simpler, and much more productive.",
-      category: 'Softwares',
-      duration: '2 months',
-    },
-    {
-      url: 'a_b_c2',
-      name: 'Mindful Mandalas: Botanical Doodling For Self-Care',
-      image: 'https://i.ibb.co/P49L8nk/448-252-2.webp',
-      price: 2999,
-      description: "Notion is one of the best productivity apps out there. It's designed to make organising and systemising your personal or professional life much simpler, and much more productive.",
-      category: 'Art',
-      duration: '1 month',
-    },
-    {
-      url: 'a_b_c3',
-      name: 'Figma UI UX Design Essentials for Beginners (2024 Updated)',
-      image: 'https://i.ibb.co/bs0ZWSm/448-252-1.webp',
-      price: 12999,
-      description: "Notion is one of the best productivity apps out there. It's designed to make organising and systemising your personal or professional life much simpler, and much more productive.",
-      category: 'Softwares',
-      duration: '4 months',
-    },
-    {
-      url: 'a_b_c4',
-      name: 'Basic Skills / Getting Started with Drawing',
-      image: 'https://i.ibb.co/ZmxXC1J/448-252.webp',
-      price: 5999,
-      description: "Notion is one of the best productivity apps out there. It's designed to make organising and systemising your personal or professional life much simpler, and much more productive.",
-      category: 'Art',
-      duration: '1 months',
-    },
-  ]
+  const [popularCourses, setPopularCourses] = useState([]);
+
+
+  // GET COURSES
+  const [courses, setCourses] = useState([]);
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(`${process.env.NEXT_PUBLIC_HOST}/api/getcourses`, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      setCourses(response.data);
+    } catch (error) {
+      console.error('There was a problem with your fetch operation:', error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    for (let i = 0; i < courses.length; i++) {
+      const limit = [0, 1, 2, 3];
+
+      const myArr = [];
+
+      for (let index = 0; index < limit.length; index++) {
+        myArr.push(courses[i++]);
+      }
+
+      setPopularCourses(myArr)
+    }
+  }, [courses])
+
+  console.log(popularCourses)
 
   return (
     <>
@@ -136,16 +140,18 @@ export default function Home() {
               </div>
 
               <div className="flex justify-start items-center w-full mt-6">
-                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-y-6 sm:gap-y-6 md:gap-y-0 lg:gap-y-0 xl:gap-y-0 gap-x-4 justify-center items-center w-full">
-                  {popularCourses.map((course, index) => <ProductCart key={index}
-                    url={course.url}
-                    name={course.name}
-                    image={course.image}
-                    price={course.price}
-                    description={course.description}
-                    category={course.category}
-                    duration={course.duration}
-                  />)}
+                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-x-4 gap-y-8 justify-center items-center w-full">
+                  {Object.keys(popularCourses).map((item) => {
+                    return <ProductCart key={popularCourses[item]._id}
+                      url={popularCourses[item].slug}
+                      name={popularCourses[item].title}
+                      image={popularCourses[item].dimg}
+                      price={popularCourses[item].price}
+                      description={popularCourses[item].desc}
+                      category={popularCourses[item].category}
+                      duration={popularCourses[item].duration}
+                    />
+                  })}
                 </div>
               </div>
             </div>
