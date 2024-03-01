@@ -15,7 +15,7 @@ import ProductCart from '@/components/sections/ProductCart';
 // AXIOS
 import axios from 'axios';
 
-const Page = () => {
+export default function Page() {
     const router = useRouter();
     const query = useSearchParams();
 
@@ -118,5 +118,3 @@ const Page = () => {
         </>
     )
 }
-
-export default Page
