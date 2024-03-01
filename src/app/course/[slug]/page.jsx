@@ -94,7 +94,7 @@ export default function Page({ params }) {
         <>
             <div className="block justify-start items-center w-screen h-full pt-2 sm:pt-2 md:pt-4 lg:pt-4 xl:pt-4 pb-20 bg-white text-[#191919] overflow-x-hidden">
                 <div className="block justify-start items-center w-full h-full px-2 sm:px-2 md:px-4 lg:px-4 xl:px-4">
-                    <div className="relative block sm:block md:flex lg:flex xl:flex justify-between items-center w-full h-full p-4 sm:p-4 m:p-8 lg:p-8 xl:p-8 bg-[#fafafa] border border-[#e5e5e5] rounded-lg">
+                    {!(course.title === undefined || course.title === '' || course.title == [] || course.title === null) ? <div className="relative block sm:block md:flex lg:flex xl:flex justify-between items-center w-full h-full p-4 sm:p-4 m:p-8 lg:p-8 xl:p-8 bg-[#fafafa] border border-[#e5e5e5] rounded-lg">
                         <div className="flex justify-start items-center w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 h-full">
                             <div className="block justify-start items-center w-auto h-full">
                                 <div className="flex justify-start items-center w-auto h-6 select-none">
@@ -180,7 +180,31 @@ export default function Page({ params }) {
                                 />
                             </div>
                         </div>
-                    </div>
+                    </div> : <div className="relative block sm:block md:flex lg:flex xl:flex justify-between items-center w-full h-full p-4 sm:p-4 m:p-8 lg:p-8 xl:p-8 bg-[#fafafa] border border-[#e5e5e5] rounded-lg">
+                        <div className="block justify-start items-center w-full h-full space-y-4">
+                            <div className="flex justify-center items-center w-[30%] sm:w-[30%] md:w-[22%] lg:w-[22%] xl:w-[22%] h-8 border border-[#e5e5e5] rounded" id="skeleton__anim" />
+
+                            <div className="flex justify-center items-center w-[90%] sm:w-[90%] md:w-[65%] lg:w-[65%] xl:w-[65%] h-14 border border-[#e5e5e5] rounded" id="skeleton__anim" />
+
+                            <div className="flex justify-center items-center w-[50%] sm:w-[50%] md:w-[30%] lg:w-[30%] xl:w-[30%] h-12 border border-[#e5e5e5] rounded" id="skeleton__anim" />
+
+                            <div className="flex justify-start items-center w-[90%] sm:w-[90%] md:w-[65%] lg:w-[65%] xl:w-[65%] space-x-4">
+                                <div className="flex justify-center items-center w-full h-20 border border-[#e5e5e5] rounded" id="skeleton__anim" />
+
+                                <div className="flex justify-center items-center w-full h-20 border border-[#e5e5e5] rounded" id="skeleton__anim" />
+                            </div>
+
+                            <div className="flex justify-start items-center w-[80%] sm:w-[80%] md:w-[50%] lg:w-[50%] xl:w-[50%] space-x-4">
+                                <div className="flex justify-center items-center w-full h-12 border border-[#e5e5e5] rounded" id="skeleton__anim" />
+
+                                <div className="flex justify-center items-center w-full h-12 border border-[#e5e5e5] rounded" id="skeleton__anim" />
+                            </div>
+                        </div>
+
+                        <div className="flex justify-end items-center w-full h-full mt-4 sm:mt-4 md:mt-0 lg:mt-0 xl:mt-0">
+                            <div className="flex justify-center items-center w-full sm:w-full md:w-[80%] lg:w-[80%] xl:w-[80%] h-64 border border-[#e5e5e5] rounded" id="skeleton__anim" />
+                        </div>
+                    </div>}
                 </div>
 
                 <div className="block justify-start items-center w-full mt-6 text-[#191919]">

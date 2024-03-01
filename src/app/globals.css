@@ -103,6 +103,10 @@ svg {
   -webkit-touch-callout: none;
 }
 
+body {
+  overflow-x: hidden !important;
+}
+
 html {
   scroll-behavior: smooth !important;
 }
@@ -142,4 +146,40 @@ html {
 
 .font__spline {
   font-family: "Spline Sans Mono", monospace !important;
+}
+
+
+
+#skeleton__anim {
+  position: relative;
+  background-color: #fcfcfc;
+  overflow: hidden;
+}
+#skeleton__anim::after {
+  content: ' ';
+  position: absolute;
+  left: 30rem;
+  width: 20rem;
+  height: 100%;
+
+  background: rgba(255, 255, 255, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgb(0, 0, 0, 1) 50%,
+    rgba(255, 255, 255, 0) 70%
+  );
+
+  opacity: 2%;
+
+  animation: skeleton_anim 1000ms linear infinite;
+}
+
+@keyframes skeleton_anim {
+  0% {
+    left: -30rem;
+  }
+  100% {
+    left: 30rem;
+  }
 }
