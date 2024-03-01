@@ -56,13 +56,26 @@ const Page = () => {
                         All courses
                     </div>
 
-                    <div className="flex justify-start items-center w-full mt-1 text-base leading-none text-[#767676]">
-                        {courses?.length} courses
-                    </div>
-                    
+                    {<div className="flex justify-start items-center w-full h-6 text-base leading-none text-[#767676]">
+                        {!(courses == [] || courses === undefined || courses === null || courses === '' || courses.length === 0) &&
+                            `${courses?.length} courses`
+                        }
+                    </div>}
+
 
                     <div className="flex justify-start items-center w-full mt-6">
-                        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-x-4 gap-y-8 justify-center items-center w-full">
+                        {(courses == [] || courses === undefined || courses === null || courses === '' || courses.length === 0) && <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-x-4 gap-y-8 justify-center items-center w-full">
+                            <div className="flex justify-center items-center w-[17rem] h-[16.5rem] bg-[#ededed]" id="skeleton__anim" />
+                            <div className="flex justify-center items-center w-[17rem] h-[16.5rem] bg-[#ededed]" id="skeleton__anim" />
+                            <div className="flex justify-center items-center w-[17rem] h-[16.5rem] bg-[#ededed]" id="skeleton__anim" />
+                            <div className="flex justify-center items-center w-[17rem] h-[16.5rem] bg-[#ededed]" id="skeleton__anim" />
+                            <div className="flex justify-center items-center w-[17rem] h-[16.5rem] bg-[#ededed]" id="skeleton__anim" />
+                            <div className="flex justify-center items-center w-[17rem] h-[16.5rem] bg-[#ededed]" id="skeleton__anim" />
+                            <div className="flex justify-center items-center w-[17rem] h-[16.5rem] bg-[#ededed]" id="skeleton__anim" />
+                            <div className="flex justify-center items-center w-[17rem] h-[16.5rem] bg-[#ededed]" id="skeleton__anim" />
+                        </div>}
+
+                        {!(courses == [] || courses === undefined || courses === null || courses === '' || courses.length === 0) && <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-x-4 gap-y-8 justify-center items-center w-full">
                             {Object.keys(courses).map((item) => {
                                 return <ProductCart key={courses[item]._id}
                                     url={courses[item].slug}
@@ -74,7 +87,7 @@ const Page = () => {
                                     duration={courses[item].duration}
                                 />
                             })}
-                        </div>
+                        </div>}
                     </div>
                 </div>
             </div>

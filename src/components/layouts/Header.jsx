@@ -47,7 +47,8 @@ const Header = () => {
 
                 <div className="hidden sm:hidden md:flex lg:flex xl:flex justify-center items-center w-[64%] h-full bg-white space-x-2.5">
                     <div className="flex justify-center items-center w-auto h-full">
-                        <button className="flex justify-between items-center w-28 h-full px-3 py-4 space-x-1 bg-white border border-[#e5e5e5] hover:bg-[#f7f7f7] active:border-[#c0c0c0] focus:border-[#c0c0c0] focus:ring-[2.5px] focus:ring-[#f1f1f1] rounded leading-none text-sm text-[#191919] font-medium duration-100  no-focus" onClick={() => setExploreMenu(!exploreMenu)}>
+                        <Link href={'/courses'} className="flex justify-center items-center w-full h-full">
+                        <button className="flex justify-between items-center w-28 h-full px-3 py-4 space-x-1 bg-white border border-[#e5e5e5] hover:bg-[#f7f7f7] active:border-[#c0c0c0] focus:border-[#c0c0c0] focus:ring-[2.5px] focus:ring-[#f1f1f1] rounded leading-none text-sm text-[#191919] font-medium duration-100 no-focus"> {/* __ onClick={() => setExploreMenu(!exploreMenu)} __ */}
                             <div className="flex justify-start items-center"> Explore </div>
 
                             <svg className="flex justify-end items-center w-4 h-4" width={24} height={24}>
@@ -57,6 +58,7 @@ const Header = () => {
                                 ></use>
                             </svg>
                         </button>
+                        </Link>
                     </div>
 
                     <div className="flex justify-center items-center w-full h-full text-[#191919]">
