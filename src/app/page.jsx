@@ -90,7 +90,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="absolute bottom-0 flex sm:flex md:hidden lg:hidden xl:hidden justify-end items-end w-full h-full overflow-hidden select-none">
+                <div className="absolute bottom-0 flex sm:flex md:hidden lg:hidden xl:hidden justify-end items-end w-full h-full overflow-hidden select-none pointer-events-none">
                   <div className="flex justify-end items-end w-full h-auto">
                     <Image className="flex justify-end items-end w-full h-auto"
                       src={'/images/home_banner__01.svg'}
