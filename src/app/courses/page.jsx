@@ -59,6 +59,7 @@ const Page = () => {
                     <div className="flex justify-start items-center w-full mt-1 text-base leading-none text-[#767676]">
                         {courses?.length} courses
                     </div>
+                    
 
                     <div className="flex justify-start items-center w-full mt-6">
                         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-x-4 gap-y-8 justify-center items-center w-full">
