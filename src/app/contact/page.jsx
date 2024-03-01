@@ -46,7 +46,7 @@ const Page = () => {
                                         Chat to support
                                     </div>
                                     <div className="flex justify-start items-center w-full mt-1 text-sm leading-none text-[#767676]">
-                                        We're here to help.
+                                        We&#39;re here to help.
                                     </div>
                                 </div>
 
