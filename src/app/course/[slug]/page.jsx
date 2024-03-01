@@ -90,6 +90,10 @@ export default function Page({ params }) {
         'class-ratings'
     ]
 
+
+    // ENROLL POPUP
+    const [isEnrollPopup, setIsEnrollPopup] = useState(false);
+
     return (
         <>
             <div className="block justify-start items-center w-screen h-full pt-2 sm:pt-2 md:pt-4 lg:pt-4 xl:pt-4 pb-20 bg-white text-[#191919] overflow-x-hidden">
@@ -148,7 +152,9 @@ export default function Page({ params }) {
                                 </div>
 
                                 <div className="block sm:block md:flex lg:flex xl:flex justify-start items-center w-full h-10 mt-4 space-x-0 sm:space-x-0 md:space-x-3 lg:space-x-3 xl:space-x-3 space-y-2 sm:space-y-2 md:space-y-0 lg:space-y-0 xl:space-y-0">
-                                    <button className="flex justify-center items-center w-auto h-full px-4 bg-[#1f883d] rounded border border-[#1f793a] hover:bg-[#1b7135] active:border-[#1a7f37] focus:border-[#1a7f37] focus:ring-[2.5px] focus:ring-[#b4d4c5] text-white font-medium duration-100  no-focus select-none space-x-1.5">
+                                    <button className="flex justify-center items-center w-auto h-full px-4 bg-[#1f883d] rounded border border-[#1f793a] hover:bg-[#1b7135] active:border-[#1a7f37] focus:border-[#1a7f37] focus:ring-[2.5px] focus:ring-[#b4d4c5] text-white font-medium duration-100  no-focus select-none space-x-1.5"
+                                        onClick={() => setIsEnrollPopup(!isEnrollPopup)}
+                                    >
                                         <svg className="flex justify-center items-center w-4 h-4" strokeWidth={1.5}
                                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
@@ -252,6 +258,57 @@ export default function Page({ params }) {
                     </div>
                 </div>
             </div>
+
+            <AnimatePresence>
+                {isEnrollPopup && <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{
+                        ease: 'linear',
+                        delay: 0,
+                        duration: 0.1,
+                    }}
+                    className="fixed z-[550] top-0 left-0 flex justify-center items-center w-full h-full overflow-hidden"
+                >
+                    <div className="absolute z-[1] flex justify-center items-center w-full h-full bg-black/5" onClick={() => setIsEnrollPopup(false)} />
+
+                    <div className="z-[2] block justify-start items-center w-full sm:w-full md:w-[35%] lg:w-[35%] xl:w-[35%] h-auto px-2 py-2 mx-4 sm:mx-4 md:mx-0 lg:mx-0 xl:mx-0 bg-white border border-[#e5e5e5] rounded overflow-hidden">
+                        <div className="flex flex-col justify-end items-center w-full">
+                            <div className="flex justify-start items-center w-full px-2 py-2 font-semibold text-sm"> Contact Us to Apply </div>
+
+                            <ul className="flex flex-col justify-start items-center w-full mt-1 py-1 border-t border-[#e5e5e5] text-[#191919] select-none">
+                                <li className="flex justify-between items-center w-full p-1 rounded-md bg-[#f7f7f7] border border-[#e5e5e5] leading-none space-x-1 cursor-pointer">
+                                    <div className="flex justify-start items-center w-24 h-full py-1 px-2 bg-white border border-[#e5e5e5] rounded space-x-1">
+                                        <Image className="flex justify-center items-center w-8 h-8"
+                                            src={'/images/icons/india.png'}
+                                            width={96}
+                                            height={96}
+                                            alt={'indian_flag_icon01'}
+                                        />
+
+                                        <div>
+                                            91+
+                                        </div>
+                                    </div>
+
+                                    <div className="flex justify-start items-center w-full">
+                                        <div className="flex justify-start items-center w-full h-10 px-2 bg-white border border-[#e5e5e5] rounded">
+                                            XXX XXX XXXX
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div className="flex justify-center items-center w-full h-10 mt-0.5">
+                            <button className="flex justify-center items-center w-full h-full px-2.5 bg-white border border-[#e5e5e5] hover:bg-[#f7f7f7] active:border-[#c0c0c0] focus:border-[#c0c0c0] focus:ring-[2.5px] focus:ring-[#f1f1f1] rounded leading-none text-sm font-medium no-focus" onClick={() => setIsEnrollPopup(false)}>
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </motion.div>}
+            </AnimatePresence>
         </>
     )
 }

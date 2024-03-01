@@ -561,5 +561,20 @@
                 d="M4 8C3.45 8 3 7.55 3 7C3 6.45 3.45 6 4 6H20C20.55 6 21 6.45 21 7C21 7.55 20.55 8 20 8H4ZM4 13H20C20.55 13 21 12.55 21 12C21 11.45 20.55 11 20 11H4C3.45 11 3 11.45 3 12C3 12.55 3.45 13 4 13ZM4 18H20C20.55 18 21 17.55 21 17C21 16.45 20.55 16 20 16H4C3.45 16 3 16.45 3 17C3 17.55 3.45 18 4 18Z"
                 fill="currentColor"></path>
         </symbol>
+
+
+        <symbol id="icon-flag" fill="none" viewBox="0 0 72 45">
+            <g clip-path="url(#clip0_409_2)">
+                <path d="M0 4C0 1.79086 1.79086 0 4 0H68C70.2091 0 72 1.79086 72 4V15H0V4Z" fill="#F38B2B" />
+                <rect y="15" width="72" height="15" fill="white" />
+                <path d="M0 30H72V41C72 43.2091 70.2091 45 68 45H4C1.79086 45 0 43.2091 0 41V30Z" fill="#1D8D37" />
+                <circle cx="36.5" cy="22.5" r="7.5" fill="#010E36" />
+            </g>
+            <defs>
+                <clipPath id="clip0_409_2">
+                    <rect width="72" height="45" fill="white" />
+                </clipPath>
+            </defs>
+        </symbol>
     </defs>
 </svg>

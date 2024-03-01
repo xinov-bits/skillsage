@@ -28,7 +28,7 @@ const Page = () => {
     ]
 
 
-    // GET PRODUCTS
+    // GET COURSES
     const [courses, setCourses] = useState([]);
 
     const fetchData = async () => {
