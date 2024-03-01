@@ -54,8 +54,6 @@ export default function Home() {
     }
   }, [courses])
 
-  console.log(popularCourses)
-
   return (
     <>
       <main className="flex justify-cemter items-start w-full h-full py-4 pb-20">
