@@ -85,7 +85,7 @@ const Page = () => {
                                 </svg>
                             </div>
 
-                            <input className="flex justify-center items-center w-full h-full pl-8 p-2 border border-[#e5e5e5] hover:bg-[#f7f7f7] active:border-[#c0c0c0] focus:border-[#c0c0c0] focus:ring-[2.5px] focus:ring-[#f1f1f1] rounded leading-none text-sm font-medium duration-100 bg-transparent placeholder:text-[#292929]  no-focus" placeholder="Search for courses, skills, anything" type="text" name="search_inp_keyw"
+                            <input className="flex justify-center items-center w-full h-full pl-8 p-2 border border-[#e5e5e5] hover:bg-[#f7f7f7] active:border-[#c0c0c0] focus:border-[#c0c0c0] focus:ring-[2.5px] focus:ring-[#f1f1f1] rounded leading-none text-sm font-medium duration-100 bg-transparent placeholder:text-[#767676]  no-focus" placeholder="Search for courses, skills, anything" type="text" name="search_inp_keyw"
                                 onChange={(event) => {
                                     setSearchKeyword(event.target.value);
                                 }}

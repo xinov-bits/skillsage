@@ -70,7 +70,7 @@ const Header = () => {
                                 </svg>
                             </div>
 
-                            <input className="flex justify-center items-center w-full h-full pl-8 p-2 border border-[#e5e5e5] hover:bg-[#f7f7f7] active:border-[#c0c0c0] focus:border-[#c0c0c0] focus:ring-[2.5px] focus:ring-[#f1f1f1] rounded leading-none text-sm font-medium duration-100 bg-transparent placeholder:text-[#292929]  no-focus" placeholder="Search for courses, skills, anything" type="text" name="search_inp_keyw"
+                            <input className="flex justify-center items-center w-full h-full pl-8 p-2 border border-[#e5e5e5] hover:bg-[#f7f7f7] active:border-[#c0c0c0] focus:border-[#c0c0c0] focus:ring-[2.5px] focus:ring-[#f1f1f1] rounded leading-none text-sm font-medium duration-100 bg-transparent placeholder:text-[#767676]  no-focus" placeholder="Search for courses, skills, anything" type="text" name="search_inp_keyw"
                                 onChange={(event) => {
                                     setSearchKeyword(event.target.value);
                                 }}
@@ -108,6 +108,28 @@ const Header = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
                     </button>
+                </div>
+            </div>
+
+
+            <div className="fixed z-[500] top-14 flex sm:flex md:hidden lg:hidden xl:hidden justify-center items-center w-full h-16 py-2.5 px-4 bg-white border-b border-[#e5e5e5] overflow-hidden select-none">
+                <div className="flex justify-center items-center w-full h-full text-[#191919]">
+                    <form className="relative flex justify-center items-center w-full h-full bg-white" htmlFor="search_inp_keyw" onSubmit={handleSearchSubmit}>
+                        <div className="absolute left-0 flex justify-center items-center w-8 h-full pointer-events-none">
+                            <svg className="flex justify-center items-center w-4 h-4" width={16} height={16}>
+                                <use
+                                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                                    xlinkHref="/on/demandware/svg/non-critical.svg#icon-search"
+                                ></use>
+                            </svg>
+                        </div>
+
+                        <input className="flex justify-center items-center w-full h-full pl-8 p-2 border border-[#e5e5e5] hover:bg-[#f7f7f7] active:border-[#c0c0c0] focus:border-[#c0c0c0] focus:ring-[2.5px] focus:ring-[#f1f1f1] rounded leading-none text-sm font-medium duration-100 bg-transparent placeholder:text-[#767676]  no-focus" placeholder="Search for courses, skills, anything" type="text" name="search_inp_keyw"
+                            onChange={(event) => {
+                                setSearchKeyword(event.target.value);
+                            }}
+                        />
+                    </form>
                 </div>
             </div>
 
