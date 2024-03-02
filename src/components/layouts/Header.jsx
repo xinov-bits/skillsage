@@ -48,16 +48,16 @@ const Header = () => {
                 <div className="hidden sm:hidden md:flex lg:flex xl:flex justify-center items-center w-[64%] h-full bg-white space-x-2.5">
                     <div className="flex justify-center items-center w-auto h-full">
                         <Link href={'/courses'} className="flex justify-center items-center w-full h-full">
-                        <button className="flex justify-between items-center w-28 h-full px-3 py-4 space-x-1 bg-white border border-[#e5e5e5] hover:bg-[#f7f7f7] active:border-[#c0c0c0] focus:border-[#c0c0c0] focus:ring-[2.5px] focus:ring-[#f1f1f1] rounded leading-none text-sm text-[#191919] font-medium duration-100 no-focus"> {/* __ onClick={() => setExploreMenu(!exploreMenu)} __ */}
-                            <div className="flex justify-start items-center"> Explore </div>
+                            <button className="flex justify-between items-center w-28 h-full px-3 py-4 space-x-1 bg-white border border-[#e5e5e5] hover:bg-[#f7f7f7] active:border-[#c0c0c0] focus:border-[#c0c0c0] focus:ring-[2.5px] focus:ring-[#f1f1f1] rounded leading-none text-sm text-[#191919] font-medium duration-100 no-focus"> {/* __ onClick={() => setExploreMenu(!exploreMenu)} __ */}
+                                <div className="flex justify-start items-center"> Explore </div>
 
-                            <svg className="flex justify-end items-center w-4 h-4" width={24} height={24}>
-                                <use
-                                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                                    xlinkHref="/on/demandware/svg/non-critical.svg#icon-chevron-down"
-                                ></use>
-                            </svg>
-                        </button>
+                                <svg className="flex justify-end items-center w-4 h-4" width={24} height={24}>
+                                    <use
+                                        xmlnsXlink="http://www.w3.org/1999/xlink"
+                                        xlinkHref="/on/demandware/svg/non-critical.svg#icon-chevron-down"
+                                    ></use>
+                                </svg>
+                            </button>
                         </Link>
                     </div>
 
@@ -83,22 +83,26 @@ const Header = () => {
 
                 <div className="hidden sm:hidden md:flex lg:flex xl:flex justify-end items-center w-[22%] h-full bg-white space-x-2 text-[#191919]">
                     <div className="flex justify-center items-center w-auto h-full">
-                        <button className="flex justify-center items-center w-full h-full px-2.5 bg-white border border-[#e5e5e5] hover:bg-[#f7f7f7] active:border-[#c0c0c0] focus:border-[#c0c0c0] focus:ring-[2.5px] focus:ring-[#f1f1f1] rounded leading-none text-sm font-medium no-focus">
-                            Sign In
-                        </button>
+                        <Link href="/auth/signin" className="h-full">
+                            <button className="flex justify-center items-center w-full h-full px-2.5 bg-white border border-[#e5e5e5] hover:bg-[#f7f7f7] active:border-[#c0c0c0] focus:border-[#c0c0c0] focus:ring-[2.5px] focus:ring-[#f1f1f1] rounded leading-none text-sm font-medium no-focus">
+                                Sign In
+                            </button>
+                        </Link>
                     </div>
 
                     <div className="flex justify-center items-center w-auto h-full">
-                        <button className="flex justify-center items-center w-full h-full px-2.5 bg-[#0f102e] border border-[#0f102e] hover:bg-[#1a1c48] active:border-[#0c0d26] focus:border-[#0c0d26] focus:ring-[2.5px] focus:ring-[#9cb9d9] text-white rounded leading-none text-sm font-medium space-x-1 no-focus">
-                            <svg className="flex justify-center items-center w-5 h-5" strokeWidth={1.5}
-                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                            </svg>
+                        <Link href="/auth/signup" className="h-full">
+                            <button className="flex justify-center items-center w-full h-full px-2.5 bg-[#0f102e] border border-[#0f102e] hover:bg-[#1a1c48] active:border-[#0c0d26] focus:border-[#0c0d26] focus:ring-[2.5px] focus:ring-[#9cb9d9] text-white rounded leading-none text-sm font-medium space-x-1 no-focus">
+                                <svg className="flex justify-center items-center w-5 h-5" strokeWidth={1.5}
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                </svg>
 
-                            <div>
-                                Sign Up
-                            </div>
-                        </button>
+                                <div>
+                                    Sign Up
+                                </div>
+                            </button>
+                        </Link>
                     </div>
 
                     <div className="relative flex justify-center items-center w-9 h-full bg-white rounded">

@@ -1,5 +1,5 @@
-import Course from '../../../models/Course';
-import connectDb from '../../../middleware/mongoose';
+import Course from '@/models/Course';
+import connectDb from '@/middleware/mongoose';
 import { NextResponse } from 'next/server';
 
 // Establish MongoDB connection

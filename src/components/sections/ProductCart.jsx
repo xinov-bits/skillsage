@@ -52,7 +52,7 @@ const ProductCart = ({ url, name, image, price, description, category, duration 
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{
-                    ease: 'linear',
+                    // ease: 'linear',
                     delay: 0,
                     // duration: 0.1,
                 }}
